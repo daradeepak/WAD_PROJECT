@@ -1,0 +1,357 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS Files -->
+    <link rel="stylesheet" href="{% static 'https://use.fontawesome.com/releases/v5.8.1/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/font-awesome-5.8.1.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/mdb.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/style.css' %}">
+    <title>Travel Yaari</title>
+</head>
+<body>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-teal">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+               <i class="fa fa-plane-departure"></i> Travel Yaari</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#travel-navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="{% static 'collapse navbar-collapse' %}" id="travel-navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="{% static 'nav-item px-3' %}">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="{% static 'nav-item px-3' %}">
+                        <a href="#search" class="nav-link">Search</a>
+                    </li>
+                    <li class="{% static 'nav-item px-3' %}">
+                        <a href="#places" class="nav-link">Visiting Spots</a>
+                    </li>
+                    <li class="{% static 'nav-item px-3' %}">
+                        <a href="#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="{% static 'nav-item px-3' %}">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="{% static 'nav-item px-3'">
+                        <a href="HTML/login.html" class="nav-link">Login/ Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Slider Section -->
+    <section>
+        <div class="carousel slide" id="travel-slider" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#travel-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#travel-slider" data-slide-to="1"></li>
+                <li data-target="#travel-slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/slider_1.png' %}" alt="" class="img-fluid w-100">
+                    <div class="carousel-caption text-left animated zoomIn delay-1s">
+                        <h5 class="display-4">Take Your Dream Vacation</h5>
+                        <p class="lead">Adventure awaits, go find it.</p>
+                        <button class="btn btn-teal">Read More</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/slider_2.png' %}" alt="" class="img-fluid w-100">
+                    <div class="carousel-caption text-right animated zoomIn delay-1s">
+                        <h5 class="display-4">Ultimate Destination</h5>
+                        <p class="lead">We will get you best touristspots over South India</p>
+                        <button class="btn btn-teal">Read More</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/slider_3.png' %}" alt="" class="img-fluid w-100">
+                    <div class="carousel-caption text-left animated zoomIn delay-1s">
+                        <h5 class="display-4">Group and Individual gateways</h5>
+                        <p class="lead">Experience. Tourism. These are as education in themselves.</p>
+                        <button class="btn btn-teal">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#travel-slider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#travel-slider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search" class="p-3 bg-teal text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5 class="display-4">Search Your Destination</h5>
+                    <p class="lead">Are you looking for romantic beaches in South India? The perfect vacation with your children ? Or do you prefer sightseeing ? Refine your search with up to more filters and categories that cover everything from historical sites to amusement parks. Discover new destinations that match your traveling tastes!</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form>
+                                <div class="form-group">
+                                    <input type="search" class="form-control" placeholder="Paris">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <section class="bg-light p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center mt-3">
+                        <div class="card-body">
+                            <i class="fa fa-location-arrow fa-4x text-teal"></i>
+                            <p class="h2">Pick Location</p>
+                            <p>Feed your wanderlust.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center mt-3">
+                        <div class="card-body">
+                            <i class="fa fa-building fa-4x text-teal"></i>
+                            <p class="h2">Shop Travel</p>
+                            <p>Answer it Royally.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center mt-3">
+                        <div class="card-body">
+                            <i class="fa fa-plane-departure fa-4x text-teal"></i>
+                            <p class="h2">Fly Cheap</p>
+                            <p>Dream. Explore. Discover</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Places -->
+    <section id="places" class="p-3">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <h5 class="display-4">
+                        <span class="text-teal">Popular</span> Places
+                    </h5>
+                    <p class="lead">Here you can see the most popular places visited by people around the world</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mt-3">
+                        <img src="{% static 'images/card_1.png' %}" class="img-fluid" alt="">
+                        <div class="card-body">
+                            <h3 class="card-title">Karnataka</h3>
+                            <p class="card-text">Kerala, a surreal destination where the morning brings in the mist and magic. Fondly called the “God’s Own Country”, this is the place where the backwaters hold everyone captive with their alluring silence. Here are an array of places to visit in Kerala. Make sure you make it to all these destinations and curate some of the most pleasing memories out of your trip. </p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-3">
+                        <img src="{% static 'images/card_2.png' %}" class="img-fluid" alt="">
+                        <div class="card-body">
+                            <h3 class="card-title">Kerala</h3>
+                            <p class="card-text">Kerala, a surreal destination where the morning brings in the mist and magic. Fondly called the “God’s Own Country”, this is the place where the backwaters hold everyone captive with their alluring silence. Here are an array of places to visit in Kerala. Make sure you make it to all these destinations and curate some of the most pleasing memories out of your trip. .</p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-3">
+                        <img src="{% static 'images/card_3.png' %}" class="img-fluid" alt="">
+                        <div class="card-body">
+                            <h3 class="card-title">Andhra Pradesh</h3>
+                            <p class="card-text">Amaravathi Known as the Capital of Andhra Pradesh, Amaravathi is a planned city on the banks of the River Krishna. Amaravathi is renowned for being a site of a Buddhist Stupa that is a semi-hemispherical structure containing Buddhist relics and often called the Abode of God.</p>
+                            <button class="btn btn-teal btn-sm">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <button class="btn btn-dark btn-lg">
+                        <i class="fa fa-play mr-2"></i> Contact for Booking
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Icons -->
+    <section class="p-3 bg-teal text-white text-center"
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Follow Travel Yaari</h1>
+                    <p>Follow us on social media for special offers..</p>
+                    <a href="https://facebook.com" target="_blank" class="white-text">
+                        <i class="fab fa-facebook fa-4x m-3"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="white-text">
+                        <i class="fab fa-twitter fa-4x m-3"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="white-text">
+                        <i class="fab fa-linkedin fa-4x m-3"></i>
+                    </a>
+                    <a href="https://googleplus.com" target="_blank" class="white-text">
+                        <i class="fab fa-google-plus fa-4x m-3"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="white-text">
+                        <i class="fab fa-instagram fa-4x m-3"></i>
+                    </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="p-3">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <h5 class="display-4">
+                        <span class="text-teal">Photo</span> Gallery
+                    </h5>
+                    <p class="lead">Here are the photos of some most rated and visited places around South India.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="{% static 'images/gallery_1.png' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="{% static 'images/gallery_2.png' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="{% static 'images/gallery_3.png' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="{% static 'images/gallery_4.png' %}" class="img-fluid" title="Ramoji Film City, Telangana" alt="">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <img src="{% static 'images/gallery_5.png' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="{% static 'images/gallery_6.png' %}" class="img-fluid" title="Gokarna Kudle Beach, Karnataka" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="{% static 'images/gallery_7.png' %}" class="img-fluid" title="Mysore Palace, Karnataka" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="{% static 'images/gallery_8.png' %}" class="img-fluid" title="Munnar, Kerala" alt="">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <img src="{% static 'images/gallery_9.png' %}" class="img-fluid" title="Kollam, Kerala" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="{% static 'images/gallery_10.png' %}" class="img-fluid" title=" Raigad Fort Maharashtra" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src=" {% static 'images/gallery_11.png' %}" class="img-fluid" title="Calangute Beach, Goa" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="{% static 'images/gallery_12.png' %}" class="img-fluid" title="Puducherry Beach, Tamil Nadu" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mt-3">
+                        <div class="card-body bg-teal text-center text-white">
+                            <i class="fa fa-envelope fa-4x"></i>
+                            <h2>Contact For Bookings</h2>
+                        </div>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h3>Location</h3>
+                        </li>
+                        <li class="list-group-item">
+                            Travel Yaari Pvt Ltd
+                        </li>
+                        <li class="list-group-item">
+                            Jubilee Hills , Hyderabad
+                        </li>
+                        <li class="list-group-item">
+                            Telangana , India
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mt-3">
+                        <div class="card-header bg-teal text-white text-center">
+                            <h3>Contact Us</h3>
+                        </div>
+                        <div class="card-body bg-light">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" placeholder="Mobile Number">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Loved Destination">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="5" placeholder="Your Description"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Bootstrap Js files -->
+<script src="{% static 'bootstrap/js/jquery.js' %}"></script>
+<script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+<script src="{% static 'bootstrap/js/mdb.js' %}"></script>
+<script>
+    $('.carousel').carousel({
+        interval : 3000,
+        pause : 'hover'
+    });
+</script>
+</body>
+</html>
+
+
