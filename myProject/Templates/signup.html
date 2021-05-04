@@ -40,7 +40,7 @@
 
                 <h1 class="text-center signup-signup-title">Signup</h1>
                 <div class="signup-form-control">                    
-                    <label for="first_name">First Name</label>
+                 <label for="first_name">First Name</label>
                     <input type="text" name = "first_name" placeholder="First Name">
                     <small>Error message</small>
                 </div>
@@ -75,6 +75,14 @@
                 </p>
 
             </form>
+
+            <div>
+
+                {% for message in messages %}
+                <h3> {{message}} </h3>
+                {% endfor %}
+
+            </div>
         </div>
     </div>
     </div>
